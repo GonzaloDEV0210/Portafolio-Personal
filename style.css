@@ -1,1 +1,187 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-logo: "Tangerine", cursive;
+
+    /* Colors (HSL -> HEX) */
+    --color-background: hsl(0, 0%, 0%);
+    --color-foreground: hsl(210, 100%, 98%);
+
+    /* Primary */
+    --color-primary: hsl(222, 75%, 58%);
+    --color-primary-foreground: hsl(0, 0%, 100%);
+
+    /* Secondary */
+    --color-secondary: hsl(220, 50%, 25%);
+    --color-secondary-foreground: hsl(210, 100%, 98%);
+
+    /* Accent */
+    --color-accent: hsl(210, 100%, 83%);
+    --color-accent-foreground: hsl(0, 0%, 0%);
+
+    /* Muted */
+    --color-muted: hsl(220, 50%, 16%);
+    --color-muted-foreground: hsl(210, 30%, 70%);
+
+    /* UI Colors */
+    --color-card: hsl(220, 50%, 16%);
+    --color-border: hsl(220, 50%, 25%);
+    --color-input: hsl(220, 50%, 20%);
+    --color-ring: hsl(222, 75%, 58%);
+    --color-destructive: hsl(0, 84.2%, 60.2%);
+
+    /* Custom Portfolio Colors */
+    --color-section-bg: hsl(222, 50%, 16%);
+    --color-container-bg: hsl(222, 40%, 40%);
+    --color-highlight: hsl(222, 75%, 58%);
+    --color-highlight-hover: hsl(210, 100%, 83%);
+
+    /* Effects & Combinations: Gradients */
+    --background-image-gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    --background-image-gradient-card: linear-gradient(180deg, rgba(62, 87, 141, 0.8), rgba(20, 35, 64, 0.9));
+    --background-image-gradient-hero: radial-gradient(circle, var(--color-section-bg) 0%, var(--color-background) 100%);
+
+    /* Effects & Combinations: Shadows */
+    --shadow-card: 0 8px 32px -8px rgba(59, 111, 224, 0.2);
+    --shadow-button: 0 4px 16px -4px rgba(59, 111, 224, 0.4);
+    --shadow-glow: 0 0 40px rgba(59, 111, 224, 0.3);
+    --shadow-button-hover: 0 6px 24px -4px rgba(59, 111, 224, 0.5);
+
+    /* Animations */
+    --animate-fade-up: fadeUp 0.6s ease-out forwards;
+    --animate-fade-in: fadeIn 0.6s ease-out forwards;
+    --animate-scale-in: scaleIn 0.5s ease-out forwards;
+    --animate-float: float 3s infinite ease-in-out;
+    --animate-pulse-glow: pulse-glow 2s infinite ease-in-out;
+
+    /* Keyframes */
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes scaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes pulse-glow {
+
+        0%,
+        100% {
+            box-shadow: 0 0 40px rgba(59, 111, 224, 0.3);
+        }
+
+        50% {
+            box-shadow: 0 0 60px rgba(59, 111, 224, 0.5);
+        }
+    }
+}
+
+/* Base layer injection */
+@layer base {
+    body {
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+        font-family: var(--font-sans);
+    }
+}
+
+/* Custom Component Styles */
+@layer components {
+
+    /* .glass-card: Fondo card/80% + backdrop-blur-xl + borde semitransparente + shadow-card */
+    .glass-card {
+        background-image: var(--background-image-gradient-card);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: var(--shadow-card);
+        border-radius: 1rem;
+    }
+
+    /* .text-gradient: Texto con degradado primary->accent */
+    .text-gradient {
+        background-image: var(--background-image-gradient-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    /* .btn-primary: Fondo primary + sombra + hover eleva -2px */
+    .btn-primary {
+        background-color: var(--color-primary);
+        color: var(--color-primary-foreground);
+        box-shadow: var(--shadow-button);
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-button-hover);
+    }
+
+    /* .btn-outline: Borde primary + relleno primary al hover */
+    .btn-outline {
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+        background-color: transparent;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+    }
+
+    .btn-outline:hover {
+        background-color: var(--color-primary);
+        color: var(--color-primary-foreground);
+    }
+}
