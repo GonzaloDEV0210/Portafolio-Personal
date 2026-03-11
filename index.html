@@ -10,15 +10,40 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Tangerine:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/src/output.css">
-    <title>GPWeb</title>
+    <title>Gonzalo Palma</title>
 </head>
 
 <body>
-    <header>
-
+    <header class="fixed z-10 w-full">
+        <section class="flex justify-between p-4 items-center">
+            <h1 class="text-3xl font-logo text-accent">Gonzalo Palma</h1>
+            <img src="./media/icons/ico_menu_mobil.png" alt="Menu" class="w-5 h-5">
+        </section>
+        <nav>
+            <ul id="movil" class="hidden">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="#">Habilidades</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Contácto</a></li>
+            </ul>
+            <ul id="desktop" class="hidden">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="#">Habilidades</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Contácto</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-
+        <section class="flex justify-center">
+            <div class="bg-[image:var(--background-image-gradient-hero)] w-full h-80 flex justify-center items-center">
+                <div class="w-48 h-48 rounded-full overflow-hidden border-primary border-2">
+                    <img src="./media/img/img_perfil.jpg" alt="Perfil Gonzalo Palma" class="object-cover w-full h-full">
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
