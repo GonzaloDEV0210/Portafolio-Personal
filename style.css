@@ -34,14 +34,16 @@
 
     /* Custom Portfolio Colors */
     --color-section-bg: hsl(222, 50%, 16%);
+    --color-gradient-perfil: hsl(222 50% 32.9%);
     --color-container-bg: hsl(222, 40%, 40%);
+    --color-text-formacion: hsl(206 17.7% 61.2%);
     --color-highlight: hsl(222, 75%, 58%);
     --color-highlight-hover: hsl(210, 100%, 83%);
 
     /* Effects & Combinations: Gradients */
     --background-image-gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     --background-image-gradient-card: linear-gradient(180deg, rgba(62, 87, 141, 0.8), rgba(20, 35, 64, 0.9));
-    --background-image-gradient-hero: radial-gradient(circle, var(--color-section-bg) 0%, var(--color-background) 100%);
+    --background-image-gradient-hero: radial-gradient(circle, var(--color-gradient-perfil) 00%, var(--color-background) 90%);
 
     /* Effects & Combinations: Shadows */
     --shadow-card: 0 8px 32px -8px rgba(59, 111, 224, 0.2);
