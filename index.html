@@ -36,7 +36,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="flex flex-col items-center gap-8">
         <section class="flex justify-center flex-col items-center">
             <div
                 class="bg-[image:var(--background-image-gradient-hero)] w-full h-80 pt-8 flex justify-center items-center">
@@ -49,26 +49,29 @@
             <h3 class="text-[19px] text-[var(--color-accent)] mt-3 mb-5">Desarrollador Web <span
                     class="text-[var(--color-text-formacion)]">en formación</span>
             </h3>
-            <p class="text-[var(--color-text-formacion)] text-center text-[16px] px-3">Egresado de la carrera de
+            <p class="text-[var(--color-text-formacion)] text-center text-[16px] px-2">Egresado de la carrera de
                 Ingeniería
                 de Sistemas
                 apasionado
                 por crear experiencias web modernas y
                 funcionales. Transformando ideas en código, un proyecto a la vez.</p>
         </section>
-        <section>
-            <a href="#" class="bg-[var(--color-primary)] inline-flex items-center gap-3 px-5 py-3 rounded-xl">
+        <section class="flex flex-col items-center gap-4">
+            <a href="#" class="bg-[var(--color-primary)] inline-flex items-center gap-3 px-5 py-2.5 rounded-xl">
                 <img src="./media/icons/ico_codigo_blanco.png" alt="icono de código" class="w-5">
                 <span class="inline-block">Ver habilidades</span>
             </a>
-            <a href="#">
-                <img src="./media/icons/ico_empresa_oscuro.png" alt="icono de empresa">
-                <span>Ver proyectos</span>
+            <a href="#"
+                class="inline-flex items-center border border-[var(--color-primary)] gap-3 px-5 py-2.5 rounded-xl">
+                <img src="./media/icons/ico_empreza_claro.png" alt="icono de empresa" class="w-5">
+                <span class="text-[var(--color-primary)]">Proyectos</span>
             </a>
-            <a href="#">
-                <img src="./media/icons/ico_email_blanco.png" alt="icono de contacto">
+            <a href="#"
+                class="inline-flex items-center border-[0.5px] border-[var(--color-text-formacion)] gap-3 px-5 py-2.5 rounded-xl">
+                <img src="./media/icons/ico_email_blanco.png" alt="icono de contacto" class="w-5">
                 <span>Contácto</span>
             </a>
+            <img src="./media/icons/ico_flecha_abajo_claro.png" alt="icono de flecha abajo" class="w-5 animate-float">
         </section>
     </main>
     <footer>
