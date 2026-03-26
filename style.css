@@ -22,7 +22,8 @@
     --color-accent-foreground: hsl(0, 0%, 0%);
 
     /* Muted */
-    --color-muted: hsl(220, 50%, 16%);
+    --color-muted: #14213D;
+    --color-muted-oscuro: #14223DCC;
     --color-muted-foreground: hsl(210, 30%, 70%);
 
     /* UI Colors */
@@ -36,7 +37,7 @@
     --color-section-bg: hsl(222, 50%, 16%);
     --color-gradient-perfil: hsl(222 50% 32.9%);
     --color-container-bg: hsl(222, 40%, 40%);
-    --color-text-formacion: hsl(206 17.7% 61.2%);
+    --color-text-formacion: #9CB3C9;
     --color-highlight: hsl(222, 75%, 58%);
     --color-highlight-hover: hsl(210, 100%, 83%);
 
